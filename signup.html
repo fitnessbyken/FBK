@@ -13,14 +13,15 @@
     <header class="header">
       <div class="container nav">
         <div class="logo">Fitness By Ken</div>
-        <nav>
+
+        <button class="hamburger" id="hamburger">☰</button>
+        <div class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="products.html">Products</a>
-          <!-- <a href="payments.html">Payments</a> -->
           <a href="scheduling.html">Schedule</a>
           <a href="aboutme.html">About</a>
           <a href="login.html" class="login-link">Login</a>
-        </nav>
+        </div>
       </div>
     </header>
     <section class="section">
@@ -50,5 +51,17 @@
     </section>
 
     <script type="module" src="js/signup.js"></script>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+
+      console.log("Hamburger:", hamburger);
+      console.log("NavLinks:", navLinks);
+
+      hamburger.addEventListener("click", () => {
+        console.log("clicked");
+        navLinks.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
