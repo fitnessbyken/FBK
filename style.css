@@ -343,6 +343,10 @@ section {
     grid-template-columns: 1fr;
   }
 
+  .hero-buttons {
+    grid-template-columns: 1fr;
+  }
+
   .nav {
     /* flex-direction: column; */
     flex-wrap: wrap;
