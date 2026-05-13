@@ -356,6 +356,7 @@ section {
     width: 100%;
     max-width: 280px;
     text-align: center;
+    background-color: red;
   }
 
   .nav {
