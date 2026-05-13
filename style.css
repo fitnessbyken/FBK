@@ -339,13 +339,14 @@ section {
 
 /* mobile */
 @media (max-width: 640px) {
-  /* .grid {
-    grid-template-columns: 1fr;
-  } */
   .grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
-
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
   .nav {
     /* flex-direction: column; */
     flex-wrap: wrap;
