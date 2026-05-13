@@ -338,13 +338,14 @@ section {
 }
 
 /* mobile */
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
   }
 
   .nav {
     /* flex-direction: column; */
+    flex-wrap: wrap;
     align-items: flex-end;
     text-align: right;
     padding-right: 10px;
@@ -355,7 +356,7 @@ section {
   }
 
   .nav-links {
-    display: none;
+    display: none !important;
     flex-direction: column;
     width: 100%;
     align-items: flex-end;
@@ -364,6 +365,6 @@ section {
   }
 
   .nav-links.active {
-    display: flex;
+    display: flex !important;
   }
 }
