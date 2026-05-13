@@ -350,7 +350,7 @@ section {
     justify-content: center;
     gap: 10px;
     grid-template-columns: 1fr;
-    display: flex;
+    display: flex !important;
   }
   .hero-buttons .btn {
     width: 100%;
