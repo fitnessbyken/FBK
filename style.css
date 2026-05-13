@@ -352,6 +352,12 @@ section {
     grid-template-columns: 1fr;
     display: flex;
   }
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
   .nav {
     /* flex-direction: column; */
     flex-wrap: wrap;
