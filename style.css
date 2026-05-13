@@ -349,6 +349,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    grid-template-columns: 1fr;
   }
   .nav {
     /* flex-direction: column; */
