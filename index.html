@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness By Ken</title>
+    <script type="module" src="js/login.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER / NAV -->
+    <header class="header">
+      <div class="container nav">
+        <div class="logo">Fitness By Ken</div>
+
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <!-- <a href="payments.html">Payments</a> -->
+          <a href="scheduling.html">Schedule</a>
+          <a href="aboutme.html">About</a>
+          <a href="login.html" class="login-link">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Build a stronger, healthier you.</h1>
+        <p>Personal coaching, structured programs, and real accountability.</p>
+
+        <div class="hero-buttons">
+          <a href="scheduling.html" class="btn primary"
+            >Book a Free Consultation</a
+          >
+          <a href="products.html" class="btn secondary">View Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section">
+      <div class="container">
+        <h2 class="centerMe">What I Offer</h2>
+        <div class="grid">
+          <div class="card">
+            <h3 class="wioTitle">Online 1-on-1 Coaching</h3>
+            <p>
+              Personalized training plans & nutrition guidance tailored to your
+              goals.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="wioTitle">Online Programs</h3>
+            <p>Structured workout program you can follow anywhere.</p>
+          </div>
+
+          <div class="card">
+            <h3 class="wioTitle">Nutrition Guidance</h3>
+            <p>
+              Simple, sustainable nutrition strategies that help you achieve
+              your goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="section alt">
+      <div class="container about">
+        <div>
+          <h2 class="centerMe">About Me</h2>
+          <p>
+            I entered the fitness industry after my own weight loss journey,
+            where I lost over 50 pounds with the guidance of a coach. That
+            experience transformed my life physically and mentally and inspired
+            me to help others achieve similar lasting change. Through both
+            personal experience and coaching, I’ve learned that real progress
+            comes from structure, consistency, accountability, and sustainable
+            habits rather than quick fixes. My focus is helping people build
+            systems that lead to long-term results inside and outside the gym.
+          </p>
+          <br />
+          <a href="aboutme.html" id="learnMore" class="btn link">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to get started?</h2>
+        <p>Book your first session today and take the first step.</p>
+        <br />
+        <a href="scheduling.html" class="btn primary">Get Started</a>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Fill out the form and I’ll get back to you shortly.</p>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/meennvjg"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Jane Doe" required />
+
+          <input type="text" name="phone" placeholder="Phone Number" required />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="janedoe@email.com"
+            required
+          />
+
+          <textarea
+            name="message"
+            placeholder="I am interested in learning more about your services."
+            required
+          ></textarea>
+
+          <button type="submit" class="btn primary contactButton">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Fitness By Ken LLC. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
