@@ -18,13 +18,28 @@
       <div class="container nav">
         <div class="logo">Fitness By Ken</div>
 
-        <button class="hamburger" id="hamburger">☰</button>
+        <!-- <button class="hamburger" id="hamburger">☰</button> -->
         <div class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="products.html">Products</a>
           <a href="scheduling.html">Schedule</a>
           <a href="aboutme.html">About</a>
           <a href="login.html" class="login-link">Login</a>
+        </div>
+      </div>
+
+      <div class="container nav mobile-nav">
+        <div class="logo">Fitness By Ken</div>
+
+        <div class="mobile-right">
+          <a href="login.html" class="login-link">Login</a>
+          <button class="hamburger" id="hamburger">☰</button>
+        </div>
+        <div class="nav-links" id="navLinksMobile">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="scheduling.html">Schedule</a>
+          <a href="aboutme.html">About</a>
         </div>
       </div>
     </header>
@@ -145,10 +160,10 @@
     </footer>
     <script>
       const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("navLinks");
+      const navLinks = document.getElementById("navLinksMobile");
 
       console.log("Hamburger:", hamburger);
-      console.log("NavLinks:", navLinks);
+      console.log("NavLinksMobile:", navLinksMobile);
 
       hamburger.addEventListener("click", () => {
         console.log("clicked");
