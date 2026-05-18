@@ -24,7 +24,7 @@
           <a href="products.html">Products</a>
           <a href="scheduling.html">Schedule</a>
           <a href="aboutme.html">About</a>
-          <a href="login.html" class="login-link">Login</a>
+          <a href="login.html" class="login-link loginHidden">Login</a>
         </div>
       </div>
 
@@ -85,6 +85,64 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!--  Testimonials -->
+    <section class="results-section">
+      <h2>Client Results</h2>
+
+      <div class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+
+        <div class="carousel-track-container">
+          <div class="carousel-track">
+            <div class="slide">
+              <img src="images/image1.JPG" alt="" />
+            </div>
+
+            <div class="slide">
+              <img src="images/image2.jpeg" alt="" />
+            </div>
+
+            <div class="slide">
+              <img src="images/image3.jpg" alt="" />
+            </div>
+            <!-- <div class="slide">
+              <video
+                class="carousel-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+              >
+                <source src="images/image44.mp4" type="video/mp4" />
+              </video>
+            </div> -->
+            <div class="slide">
+              <img src="images/image5.jpeg" alt="" />
+            </div>
+            <div class="slide">
+              <img src="images/image6.JPG" alt="" />
+            </div>
+            <div class="slide">
+              <img src="images/image7.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+
+      <div class="carousel-dots">
+        <button class="dot active"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
       </div>
     </section>
 
@@ -170,5 +228,6 @@
         navLinks.classList.toggle("active");
       });
     </script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>
