@@ -1,3 +1,4 @@
+console.log("carousel js loaded");
 const track = document.querySelector(".carousel-track");
 const slides = Array.from(track.children);
 
@@ -14,17 +15,6 @@ function updateCarousel() {
   dots.forEach((dot) => dot.classList.remove("active"));
   dots[currentIndex].classList.add("active");
 
-  // handle video playback
-  //   const videos = document.querySelectorAll(".carousel-video");
-
-  //   videos.forEach((video, index) => {
-  //     if (index === currentIndex) {
-  //       video.play();
-  //     } else {
-  //       video.pause();
-  //       video.currentTime = 0; // optional reset
-  //     }
-  //   });
   const videos = document.querySelectorAll(".carousel-video");
 
   videos.forEach((video, index) => {
@@ -78,107 +68,24 @@ dots.forEach((dot, index) => {
   });
 });
 
-// let currentIndex = 0;
-
-// let isDragging = false;
-// let startX = 0;
-// let currentX = 0;
-// let prevTranslate = 0;
-// let animationID = 0;
-
-// function getSlideWidth() {
-//   return slides[0].getBoundingClientRect().width;
-// }
-
-// function setPositionByIndex() {
-//   const slideWidth = getSlideWidth();
-//   prevTranslate = currentIndex * -slideWidth;
-//   track.style.transform = `translateX(${prevTranslate}px)`;
-// }
-
-// track.addEventListener("touchstart", touchStart);
-// track.addEventListener("mousedown", touchStart);
-
-// function touchStart(e) {
-//   isDragging = true;
-//   startX = getPositionX(e);
-
-//   animationID = requestAnimationFrame(animation);
-//   track.style.transition = "none";
-// }
-
-// track.addEventListener("touchmove", touchMove);
-// track.addEventListener("mousemove", touchMove);
-
-// function touchMove(e) {
-//   if (!isDragging) return;
-
-//   const currentPosition = getPositionX(e);
-//   const diff = currentPosition - startX;
-
-//   currentX = prevTranslate + diff;
-// }
-
-// track.addEventListener("touchend", touchEnd);
-// track.addEventListener("mouseup", touchEnd);
-// track.addEventListener("mouseleave", touchEnd);
-
-// function touchEnd() {
-//   isDragging = false;
-//   cancelAnimationFrame(animationID);
-
-//   const slideWidth = getSlideWidth();
-//   const movedBy = currentX - prevTranslate;
-
-//   // how far you must swipe (20% of slide width)
-//   const threshold = slideWidth * 0.2;
-
-//   if (movedBy < -threshold && currentIndex < slides.length - 1) {
-//     currentIndex++;
-//   }
-
-//   if (movedBy > threshold && currentIndex > 0) {
-//     currentIndex--;
-//   }
-
-//   track.style.transition = "transform 0.3s ease-out";
-//   setPositionByIndex();
-// }
-
-// function animation() {
-//   track.style.transform = `translateX(${currentX}px)`;
-//   if (isDragging) requestAnimationFrame(animation);
-// }
-
 function getPositionX(e) {
   return e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
 }
 
-function animation() {
-  track.style.transform = `translateX(${currentX}px)`;
-  requestAnimationFrame(animation);
-}
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const nextButton = document.querySelector(".next");
-//   const prevButton = document.querySelector(".prev");
-
-//   nextButton.addEventListener("click", () => {
-//     currentIndex++;
-//     updateCarousel();
-//   });
-
-//   prevButton.addEventListener("click", () => {
-//     currentIndex--;
-//     updateCarousel();
-//   });
-// });
+// function animation() {
+//   track.style.transform = `translateX(${currentX}px)`;
+//   requestAnimationFrame(animation);
+// }
 
 console.log("next button:", nextButton);
-// console.trace("next clicked");
 
 document.querySelectorAll(".slide img").forEach((img) => {
   img.addEventListener("click", (e) => {
     e.preventDefault();
   });
 });
+
+console.log(track);
+console.log(nextButton);
+console.log(prevButton);
+console.log(slides);
