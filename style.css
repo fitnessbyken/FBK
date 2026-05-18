@@ -241,6 +241,7 @@ section {
 .results-section {
   padding: 60px 0;
   text-align: center;
+  background-color: var(--gray);
 }
 
 .carousel {
@@ -459,6 +460,13 @@ section {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
+}
+
+/* Terms of Service */
+.tos {
+  max-width: 75vw;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
 /* Responsive */
 /* tablet */
