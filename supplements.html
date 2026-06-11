@@ -295,13 +295,47 @@
 
     <section class="cta">
       <h2>Need Help Choosing?</h2>
-
+      <!-- <br /> -->
       <p>
         I'll help you build a supplement and nutrition strategy based on your
         goals, lifestyle, and training.
       </p>
+      <br />
 
-      <a href="scheduling.html" class="btn"> Set Up a Consultation </a>
+      <a href="scheduling.html" class="btn primary"> Set Up a Consultation </a>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Fill out the form and I’ll get back to you shortly.</p>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/meennvjg"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Jane Doe" required />
+
+          <input type="text" name="phone" placeholder="Phone Number" required />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="janedoe@email.com"
+            required
+          />
+
+          <textarea
+            name="message"
+            placeholder="I am interested in learning more about your services."
+            required
+          ></textarea>
+
+          <button type="submit" class="btn primary contactButton">
+            Send Message
+          </button>
+        </form>
+      </div>
     </section>
     <footer class="footer">
       <div class="container">
