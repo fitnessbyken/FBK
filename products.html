@@ -20,7 +20,8 @@
         <!-- <button class="hamburger" id="hamburger">☰</button> -->
         <div class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
-          <a href="products.html">Products</a>
+          <a href="products.html">Coaching</a>
+          <a href="supplements.html">Supplements</a>
           <a href="scheduling.html">Schedule</a>
           <a href="aboutme.html">About</a>
           <a href="login.html" class="login-link loginHidden">Login</a>
@@ -36,7 +37,8 @@
         </div>
         <div class="nav-links" id="navLinksMobile">
           <a href="index.html">Home</a>
-          <a href="products.html">Products</a>
+          <a href="products.html">Coaching</a>
+          <a href="supplements.html">Supplements</a>
           <a href="scheduling.html">Schedule</a>
           <a href="aboutme.html">About</a>
         </div>
@@ -45,64 +47,143 @@
 
     <section class="section">
       <div class="container">
-        <h1>Programs & Services</h1>
+        <h1>Membership Plans</h1>
+        <p>
+          Whether your goal is weight loss, strength, improved performance, or
+          preparing for your next HYROX race, I offer coaching designed to help
+          you build sustainable habits and achieve long-term results. From
+          personalized training and nutrition coaching to HYROX-focused
+          programming and group fitness, every service is built around providing
+          structure, accountability, and support tailored to your goals.
+        </p>
 
-        <div class="grid">
-          <!-- OLD BUTTONS - IGNORE 
-            <div class="card">
-            <h3>Weekly Coaching</h3>
-            <p>Perfect for beginners who want to improve their fitness.</p>
-            <p><strong>$50</strong></p>
+        <div class="membership-grid">
+          <div class="purchaseCard centerMe membership-card" id="card">
+            <div class="cardColor">
+              <h3>Weekly Online Coaching</h3>
+              <br />
+              <p class="cardP">
+                Perfect for beginners who want to improve their fitness.
+              </p>
+              <!-- <br /> -->
+              <p class="centerMe pricing">$50</p>
+              <p class="smallFont">Every week</p>
+              <br />
+              <a
+                href="https://buy.stripe.com/aFabJ143P62B5WD6iCgYU01"
+                class="btn secondaryBtn disabled-link"
+                id="checkoutBtn"
+              >
+                Join Now
+              </a>
+              <br />
+              <br />
+              <div class="checkout-agreement">
+                <label>
+                  <input type="checkbox" id="termsCheck" required />
+                  I agree to the
+                  <a href="/terms.html" target="_blank">Terms & Conditions</a>
+                  and
+                  <a href="/privacy.html" target="_blank">Privacy Policy</a>.
+                </label>
+              </div>
+            </div>
             <br />
-            <a
-              href="https://buy.stripe.com/dRm9ATfMxaiR2Kr5eygYU00"
-              class="btn primary"
-            >
-              Buy Now
-            </a>
+            <ul class="featuresList">
+              <li>Personalized workout programming</li>
+              <hr />
+              <li>Nutrition guidance and support</li>
+              <hr />
+              <li>Accountability check-ins</li>
+              <hr />
+              <li>Ongoing support and adjustments</li>
+            </ul>
           </div>
 
-          <div class="card">
-            <h3>Monthly Coaching</h3>
-            <p>Perfect for beginners who want to improve their fitness.</p>
-            <p><strong>$200</strong></p>
-            <a
-              href="https://buy.stripe.com/aFabJ143P62B5WD6iCgYU01"
-              class="btn primary"
-            >
-              Buy Now
-            </a>
-          </div>
-        -->
-          <div class="stripeButton">
-            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+          <div class="purchaseCard centerMe membership-card" id="card">
+            <div class="cardColor">
+              <h3>Monthly Online Coaching</h3>
+              <br />
+              <p class="cardP">
+                Perfect for beginners who want to improve their fitness.
+              </p>
+              <!-- <br /> -->
+              <p class="centerMe pricing">$200</p>
+              <p class="smallFont">Every month</p>
 
-            <stripe-buy-button
-              buy-button-id="buy_btn_1TVifQHsqghTHl71GZSOLZVX"
-              publishable-key="pk_live_51RvMLEHsqghTHl71uTJQRFz2Z3pCBHXSh4xgufPQFnrdPhU9qDABjY3Qm6uxnDEV0lHmOtKX6e0gKaWqujzZihJd00NiS1DwBO"
-              class="purchaseBtn"
-            >
-            </stripe-buy-button>
+              <br />
+              <a
+                href="https://buy.stripe.com/aFabJ143P62B5WD6iCgYU01"
+                class="btn secondaryBtn disabled-link"
+                id="checkoutBtn1"
+              >
+                Join Now
+              </a>
+              <!-- <br /> -->
+              <br />
+              <br />
+              <div class="checkout-agreement">
+                <label>
+                  <input type="checkbox" id="termsCheck1" required />
+                  I agree to the
+                  <a href="/terms.html" target="_blank">Terms & Conditions</a>
+                  and
+                  <a href="/privacy.html" target="_blank">Privacy Policy</a>.
+                </label>
+              </div>
+            </div>
+            <br />
+            <ul class="featuresList">
+              <li>Personalized workout programming</li>
+              <hr />
+              <li>Nutrition guidance and support</li>
+              <hr />
+              <li>Accountability check-ins</li>
+              <hr />
+              <li>Ongoing support and adjustments</li>
+            </ul>
           </div>
-          <div class="stripeButton">
-            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
-            <stripe-buy-button
-              buy-button-id="buy_btn_1TWFzRHsqghTHl71637Rd5yI"
-              publishable-key="pk_live_51RvMLEHsqghTHl71uTJQRFz2Z3pCBHXSh4xgufPQFnrdPhU9qDABjY3Qm6uxnDEV0lHmOtKX6e0gKaWqujzZihJd00NiS1DwBO"
-              class="purchaseBtn"
-            >
-            </stripe-buy-button>
-          </div>
-          <div class="stipeButton">
-            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
-            <stripe-buy-button
-              buy-button-id="buy_btn_1TWG3bHsqghTHl7117RStpWM"
-              publishable-key="pk_live_51RvMLEHsqghTHl71uTJQRFz2Z3pCBHXSh4xgufPQFnrdPhU9qDABjY3Qm6uxnDEV0lHmOtKX6e0gKaWqujzZihJd00NiS1DwBO"
-              class="purchaseBtn"
-            >
-            </stripe-buy-button>
+          <div class="purchaseCard centerMe membership-card" id="card">
+            <div class="cardColor">
+              <h3>HYROX Race Prep</h3>
+              <p class="cardP">
+                A complete 12-week system designed to prepare you for HYROX race
+                day.
+              </p>
+              <p class="centerMe pricing">$150</p>
+              <p class="smallFont">One time payment</p>
+              <br />
+              <a
+                href="https://buy.stripe.com/aFabJ143P62B5WD6iCgYU01"
+                class="btn secondaryBtn disabled-link"
+                id="checkoutBtn2"
+              >
+                Purchase
+              </a>
+              <br />
+              <br />
+              <!-- <br /> -->
+              <div class="checkout-agreement">
+                <label>
+                  <input type="checkbox" id="termsCheck2" required />
+                  I agree to the
+                  <a href="/terms.html" target="_blank">Terms & Conditions</a>
+                  and
+                  <a href="/privacy.html" target="_blank">Privacy Policy</a>.
+                </label>
+              </div>
+            </div>
+            <br />
+            <ul class="featuresList">
+              <li>12-week structured HYROX training plan</li>
+              <hr />
+              <li>Beginner, Open, and Pro level options</li>
+              <hr />
+              <li>Race-specific strength & conditioning workouts</li>
+              <hr />
+              <li>Designed to peak you for race day</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -125,5 +206,6 @@
         navLinks.classList.toggle("active");
       });
     </script>
+    <script src="JS/purchase.js"></script>
   </body>
 </html>
