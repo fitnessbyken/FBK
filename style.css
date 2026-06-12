@@ -130,6 +130,10 @@ p {
   margin-top: 10px;
 }
 
+.approachCard {
+  padding: 20px;
+}
+
 /* BUTTONS */
 #learnMore {
   padding-left: 0%;
