@@ -187,6 +187,11 @@ section {
   padding: 40px 20px;
 }
 
+.sectionIndex {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .sectionIndex .card {
   padding: 20px;
 }
@@ -306,6 +311,7 @@ h3 {
   border: 1px solid #ddd;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
+  border-radius: 15px;
   /* color: white; */
   /* padding: 20px; */
 }
