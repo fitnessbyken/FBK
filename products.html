@@ -1,9 +1,10 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products</title>
+    <title>Coaching Plans | Fitness By Ken</title>
+    <meta name="description" content="Compare Fitness By Ken coaching plans for online coaching, nutrition guidance, accountability, and HYROX race preparation." />
     <script type="module" src="js/login.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -15,9 +16,7 @@
     <!-- HEADER / NAV -->
     <header class="header">
       <div class="container nav">
-        <div class="logo">Fitness By Ken</div>
-
-        <!-- <button class="hamburger" id="hamburger">☰</button> -->
+        <a href="index.html" class="logo">Fitness By Ken</a>
         <div class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="products.html">Coaching</a>
@@ -29,11 +28,20 @@
       </div>
 
       <div class="container nav mobile-nav">
-        <div class="logo">Fitness By Ken</div>
+        <a href="index.html" class="logo">Fitness By Ken</a>
 
         <div class="mobile-right">
           <a href="login.html" class="login-link loginHidden">Login</a>
-          <button class="hamburger" id="hamburger">☰</button>
+          <button
+            class="hamburger"
+            id="hamburger"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="navLinksMobile"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
         </div>
         <div class="nav-links" id="navLinksMobile">
           <a href="index.html">Home</a>
@@ -426,19 +434,24 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+        </nav>
         <p>© 2026 Fitness By Ken LLC. All rights reserved.</p>
       </div>
     </footer>
     <script>
       const hamburger = document.getElementById("hamburger");
       const navLinks = document.getElementById("navLinksMobile");
-
-      console.log("Hamburger:", hamburger);
-      console.log("NavLinksMobile:", navLinksMobile);
-
       hamburger.addEventListener("click", () => {
-        console.log("clicked");
         navLinks.classList.toggle("active");
+        const isOpen = navLinks.classList.contains("active");
+        hamburger.setAttribute("aria-expanded", isOpen);
+        hamburger.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation menu" : "Open navigation menu",
+        );
       });
     </script>
     <script src="JS/purchase.js"></script>

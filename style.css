@@ -182,6 +182,11 @@ p {
   /* font-size: 200px; */
 }
 
+.link {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 /* SECTIONS */
 section {
   padding-top: 70px;
@@ -214,6 +219,58 @@ section {
   background: var(--accent);
 }
 
+.start-here-section,
+.homepage-faq-section {
+  background: #fafafa;
+}
+
+.start-here-grid,
+.why-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.why-work-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.start-card {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 100%;
+  padding: 30px 24px 24px;
+  border: 1px solid #e7e7e7;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 12px 28px rgba(15, 15, 15, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.start-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--accent);
+}
+
+.start-card:hover {
+  transform: translateY(-5px);
+}
+
+.start-card h3 {
+  margin: 0 0 12px;
+  padding: 0;
+  color: var(--text);
+}
+
+.start-card p {
+  margin: 0;
+  line-height: 1.65;
+}
+
 .purchaseBtn {
   /* padding-left: 30px; */
   /* border: 2px solid var(--accent); */
@@ -223,6 +280,12 @@ section {
 
 .section.alt {
   background: #f9f9f9;
+}
+
+.home-about-preview {
+  margin-top: 36px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* GRID */
@@ -582,6 +645,12 @@ hr {
 }
 
 @media (max-width: 900px) {
+  .start-here-grid,
+  .why-work-grid,
+  .testimonial-support {
+    grid-template-columns: 1fr;
+  }
+
   .plan-fit-grid,
   .process-grid,
   .results-preview-grid {
@@ -618,6 +687,20 @@ hr {
   .product-final-cta {
     padding: 55px 16px;
   }
+
+  .contact-form,
+  .auth-card,
+  .legal-card {
+    padding: 28px 20px;
+  }
+
+  .legal-document {
+    padding: 50px 16px;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
 }
 
 /* CTA */
@@ -634,24 +717,60 @@ hr {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 14px;
+  margin: 24px auto 0;
   width: 100%;
+  max-width: 720px;
+  padding: 28px;
+  border: 1px solid #e7e7e7;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 12px 28px rgba(15, 15, 15, 0.08);
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px;
-  border: 1px solid #ddd;
+  padding: 14px 16px;
+  border: 1px solid #d9dee7;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 1rem;
   width: 100%;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: #fafafa;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.14);
+}
+
+.contact-form button {
+  align-self: flex-start;
+  border: 0;
+  cursor: pointer;
+}
+
+.contact-section {
+  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+}
+
+.contact-section .container {
+  max-width: 820px;
+  text-align: center;
+}
+
+.contact-section p {
+  max-width: 620px;
+  margin: 8px auto 0;
 }
 
 /* SERVICES */
@@ -660,11 +779,72 @@ hr {
   margin-bottom: 10px;
 }
 
+.approachCard {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 20px 20px;
+}
+
+.approachCard::before,
+.about-box::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--accent);
+}
+
+.approachCard h3 {
+  padding: 0;
+}
+
 /* RESULTS */
 .results-section {
   padding: 60px 0;
   text-align: center;
   background-color: var(--gray);
+}
+
+.testimonial-support {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.testimonial-card {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 24px 24px;
+  border: 1px solid #e7e7e7;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 12px 28px rgba(15, 15, 15, 0.08);
+  text-align: left;
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--accent);
+}
+
+.testimonial-card h3 {
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.testimonial-card p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .testimonial-support {
+    grid-template-columns: 1fr;
+  }
 }
 
 .carousel {
@@ -801,9 +981,31 @@ hr {
 /* FOOTER */
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 28px 20px;
   font-size: 14px;
   background: var(--black);
+  color: white;
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: white;
+  font-weight: 700;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
 }
 
 /* 2-column layout */
@@ -816,10 +1018,18 @@ hr {
 
 /* Right-side box */
 .about-box {
+  position: relative;
+  overflow: hidden;
   background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 30px 24px 24px;
+  border: 1px solid #e7e7e7;
+  border-radius: 15px;
+  box-shadow: 0 12px 28px rgba(15, 15, 15, 0.08);
+}
+
+.about-box h3 {
+  padding: 0;
+  margin-bottom: 12px;
 }
 
 .about-box ul {
@@ -828,7 +1038,123 @@ hr {
 }
 
 .about-box li {
+  margin-bottom: 10px;
+}
+
+.legal-page {
+  background: #fafafa;
+}
+
+.legal-document {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
+.legal-card {
+  position: relative;
+  overflow: hidden;
+  padding: 42px;
+  border: 1px solid #e7e7e7;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 12px 28px rgba(15, 15, 15, 0.08);
+}
+
+.legal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--accent);
+}
+
+.legal-card h1 {
   margin-bottom: 8px;
+}
+
+.legal-card h2 {
+  margin-top: 34px;
+  margin-bottom: 12px;
+}
+
+.legal-card h3 {
+  margin-top: 24px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.legal-card p,
+.legal-card li {
+  line-height: 1.75;
+}
+
+.legal-card p {
+  margin-bottom: 16px;
+}
+
+.legal-card ul,
+.legal-card ol {
+  padding-left: 24px;
+  margin-bottom: 18px;
+}
+
+.legal-card li {
+  margin-bottom: 8px;
+}
+
+.legal-card .updated {
+  color: #555;
+  font-weight: 700;
+}
+
+.auth-section {
+  min-height: calc(100vh - 156px);
+  background: #fafafa;
+  padding: 70px 20px;
+}
+
+.auth-card {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 34px;
+  border: 1px solid #e7e7e7;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 12px 28px rgba(15, 15, 15, 0.08);
+  text-align: center;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d9dee7;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 1rem;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.14);
+}
+
+.auth-card button {
+  border: 0;
+  cursor: pointer;
+}
+
+.auth-card p {
+  margin-top: 18px;
 }
 
 .nav-links {
@@ -1161,8 +1487,8 @@ body {
 /* CTA */
 
 .cta {
-  background: var(--gray);
-  color: var(--text);
+  background: var(--black);
+  color: white;
   text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1172,6 +1498,10 @@ body {
 
 .cta h2 {
   margin-top: 0;
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .mobileBreak {
@@ -1287,16 +1617,12 @@ body {
 
   /* Terms of Service */
   .tos {
-    max-width: 75vw;
-    margin: 0 auto;
-    padding: 60px 20px;
+    max-width: 900px;
   }
 
   /* Privacy Policy */
   .privacy-policy {
-    max-width: 75vw;
-    margin: 0 auto;
-    padding: 60px 20px;
+    max-width: 900px;
   }
 
   /* Responsive */

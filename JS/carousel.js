@@ -14,8 +14,12 @@ if (track && nextButton && prevButton && dots.length) {
   function updateCarousel() {
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-    dots.forEach((dot) => dot.classList.remove("active"));
+    dots.forEach((dot) => {
+      dot.classList.remove("active");
+      dot.removeAttribute("aria-current");
+    });
     dots[currentIndex].classList.add("active");
+    dots[currentIndex].setAttribute("aria-current", "true");
 
     const videos = document.querySelectorAll(".carousel-video");
 
