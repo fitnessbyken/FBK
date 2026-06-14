@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard.html
+Disallow: /login.html
+Disallow: /signup.html
+Disallow: /payments.html
+
+Sitemap: https://fitnessbyken.com/sitemap.xml

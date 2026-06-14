@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Fitness By Ken logo">
+  <rect width="64" height="64" rx="12" fill="#0f0f0f" />
+  <rect width="64" height="7" fill="#3b82f6" />
+  <text
+    x="32"
+    y="40"
+    fill="#ffffff"
+    font-family="Montserrat, Arial, sans-serif"
+    font-size="20"
+    font-weight="800"
+    text-anchor="middle"
+  >FBK</text>
+</svg>
