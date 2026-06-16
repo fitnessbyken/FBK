@@ -142,8 +142,9 @@ p {
 }
 
 .nav-logo-title {
+  font-family: "Montserrat", sans-serif;
   font-size: 1.12rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .nav-logo-line {
@@ -156,7 +157,7 @@ p {
 
 .nav-logo-tagline {
   color: #d9dee7;
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.47rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -172,11 +173,9 @@ p {
   height: 52px;
 }
 
-.mobile-logo-mark span {
+.mobile-logo-mark .nav-logo-text {
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
 }
 
 .login-link {
@@ -1369,6 +1368,54 @@ hr {
   display: none;
 }
 
+@media (max-width: 860px) {
+  .nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    gap: 10px;
+    text-align: right;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .mobile-nav .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    text-align: right;
+    margin-top: 10px;
+  }
+
+  .mobile-nav .nav-links.active {
+    display: flex !important;
+  }
+
+  .mobile-logo-mark .nav-logo-tagline {
+    width: max-content;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+
 /* Purchase Buttons */
 .stripeButton {
   width: 100%;
@@ -1852,69 +1899,6 @@ body {
       text-align: center;
     }
 
-    .nav {
-      flex-wrap: wrap;
-      align-items: center;
-      text-align: right;
-      padding-right: 15px;
-      padding-left: 15px;
-      gap: 10px;
-      display: none;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .mobile-nav {
-      flex-wrap: wrap;
-      align-items: center;
-      text-align: right;
-      padding-right: 15px;
-      padding-left: 15px;
-      gap: 10px;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-    .hamburger {
-      display: block;
-    }
-
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      align-items: flex-end;
-      text-align: right;
-      margin-top: 10px;
-    }
-
-    .nav-links.active {
-      display: flex !important;
-    }
-    .mobile-right {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .home-page.nav-logo-expanded .nav-logo-text {
-      max-width: 190px;
-    }
-
-    .nav-logo-title {
-      font-size: 1rem;
-    }
-
-    .nav-logo-tagline {
-      width: max-content;
-      font-size: 0.39rem;
-      letter-spacing: 0.06em;
-      line-height: 1;
-      white-space: nowrap;
-      transform: scaleX(0.47);
-      transform-origin: left center;
-    }
-
     .purchaseBtn iframe,
     .stripeButton {
       width: 100% !important;
@@ -1958,69 +1942,6 @@ body {
         width: 100%;
         max-width: 280px;
         text-align: center;
-      }
-
-      .nav {
-        flex-wrap: wrap;
-        align-items: center;
-        text-align: right;
-        padding-right: 15px;
-        padding-left: 15px;
-        gap: 10px;
-        display: none;
-        justify-content: space-between;
-        width: 100%;
-      }
-
-      .mobile-nav {
-        flex-wrap: wrap;
-        align-items: center;
-        text-align: right;
-        padding-right: 15px;
-        padding-left: 15px;
-        gap: 10px;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-      }
-      .hamburger {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-end;
-        text-align: right;
-        margin-top: 10px;
-      }
-
-      .nav-links.active {
-        display: flex !important;
-      }
-      .mobile-right {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .home-page.nav-logo-expanded .nav-logo-text {
-        max-width: 190px;
-      }
-
-      .nav-logo-title {
-        font-size: 1rem;
-      }
-
-      .nav-logo-tagline {
-        width: max-content;
-        font-size: 0.39rem;
-        letter-spacing: 0.06em;
-        line-height: 1;
-        white-space: nowrap;
-        transform: scaleX(0.47);
-        transform-origin: left center;
       }
 
       .purchaseBtn iframe,
