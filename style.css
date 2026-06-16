@@ -65,7 +65,14 @@ p {
 .header {
   background: var(--black);
   color: white;
-  padding: 15px 0;
+  padding: 10px 0;
+}
+
+.home-page .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .nav {
@@ -80,6 +87,96 @@ p {
   color: white;
   text-decoration: none;
   margin-left: 15px;
+}
+
+.nav .logo {
+  margin-left: 0;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.logo-mark img {
+  display: block;
+  width: 260px;
+  max-width: 45vw;
+  height: auto;
+}
+
+.home-nav-logo {
+  gap: 10px;
+  min-width: 52px;
+  overflow: hidden;
+}
+
+.home-nav-logo img {
+  width: 52px;
+  height: 52px;
+}
+
+.nav-logo-text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transform: translateX(-8px);
+  transition:
+    max-width 0.25s ease,
+    opacity 0.2s ease,
+    transform 0.25s ease;
+}
+
+.home-page.nav-logo-expanded .nav-logo-text {
+  opacity: 1;
+  max-width: 230px;
+  transform: translateX(0);
+}
+
+.nav-logo-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+}
+
+.nav-logo-line {
+  width: 42px;
+  height: 3px;
+  margin: 5px 0 4px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.nav-logo-tagline {
+  color: #d9dee7;
+  font-family: "Inter", sans-serif;
+  font-size: 0.47rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mobile-logo-mark {
+  gap: 10px;
+}
+
+.mobile-logo-mark img {
+  width: 52px;
+  height: 52px;
+}
+
+.mobile-logo-mark span {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
 }
 
 .login-link {
@@ -102,11 +199,26 @@ p {
 }
 
 /* HERO */
+.brand-intro {
+  background:
+    radial-gradient(circle at center top, rgba(59, 130, 246, 0.24), transparent 38%),
+    var(--black);
+  padding: clamp(46px, 8vw, 90px) 0 clamp(38px, 7vw, 78px);
+  text-align: center;
+}
+
 .hero {
   background: var(--gray);
   /* padding: 80px 0; */
   padding: clamp(40px, 4vh, 80px) 0;
   text-align: center;
+}
+
+.hero-logo {
+  display: block;
+  width: min(760px, 92vw);
+  height: auto;
+  margin: 0 auto;
 }
 
 .hero h1 {
@@ -1785,6 +1897,24 @@ body {
       gap: 15px;
     }
 
+    .home-page.nav-logo-expanded .nav-logo-text {
+      max-width: 190px;
+    }
+
+    .nav-logo-title {
+      font-size: 1rem;
+    }
+
+    .nav-logo-tagline {
+      width: max-content;
+      font-size: 0.39rem;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      white-space: nowrap;
+      transform: scaleX(0.47);
+      transform-origin: left center;
+    }
+
     .purchaseBtn iframe,
     .stripeButton {
       width: 100% !important;
@@ -1873,6 +2003,24 @@ body {
         display: flex;
         align-items: center;
         gap: 15px;
+      }
+
+      .home-page.nav-logo-expanded .nav-logo-text {
+        max-width: 190px;
+      }
+
+      .nav-logo-title {
+        font-size: 1rem;
+      }
+
+      .nav-logo-tagline {
+        width: max-content;
+        font-size: 0.39rem;
+        letter-spacing: 0.06em;
+        line-height: 1;
+        white-space: nowrap;
+        transform: scaleX(0.47);
+        transform-origin: left center;
       }
 
       .purchaseBtn iframe,

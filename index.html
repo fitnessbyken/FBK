@@ -28,11 +28,11 @@
     />
   </head>
 
-  <body>
+  <body class="home-page">
     <!-- HEADER / NAV -->
     <header class="header">
       <div class="container nav">
-        <a href="index.html" class="logo">Fitness By Ken</a>
+        <a href="index.html" class="logo logo-mark home-nav-logo" aria-label="Fitness By Ken home"><img src="images/logo-circle.svg" alt="" /><span class="nav-logo-text"><span class="nav-logo-title">Fitness By Ken</span><span class="nav-logo-line" aria-hidden="true"></span><span class="nav-logo-tagline">Coaching • Nutrition • Accountability</span></span></a>
         <div class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="products.html">Coaching</a>
@@ -44,7 +44,7 @@
       </div>
 
       <div class="container nav mobile-nav">
-        <a href="index.html" class="logo">Fitness By Ken</a>
+        <a href="index.html" class="logo logo-mark mobile-logo-mark home-nav-logo" aria-label="Fitness By Ken home"><img src="images/logo-circle.svg" alt="" /><span class="nav-logo-text"><span class="nav-logo-title">Fitness By Ken</span><span class="nav-logo-line" aria-hidden="true"></span><span class="nav-logo-tagline">Coaching • Nutrition • Accountability</span></span></a>
 
         <div class="mobile-right">
           <a href="login.html" class="login-link loginHidden">Login</a>
@@ -68,6 +68,17 @@
         </div>
       </div>
     </header>
+
+    <!-- BRAND INTRO -->
+    <section class="brand-intro" id="brandIntro" aria-label="Fitness By Ken Coaching">
+      <div class="container">
+        <img
+          class="hero-logo"
+          src="images/logo-horizontal-nav.svg"
+          alt="Fitness By Ken Coaching"
+        />
+      </div>
+    </section>
 
     <!-- HERO -->
     <section class="hero">
@@ -493,6 +504,8 @@
     <script>
       const hamburger = document.getElementById("hamburger");
       const navLinks = document.getElementById("navLinksMobile");
+      const brandIntro = document.getElementById("brandIntro");
+      const header = document.querySelector(".header");
       hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("active");
         const isOpen = navLinks.classList.contains("active");
@@ -502,6 +515,19 @@
           isOpen ? "Close navigation menu" : "Open navigation menu",
         );
       });
+
+      const updateHomeNavLogo = () => {
+        if (!brandIntro || !header) return;
+        const introBottom = brandIntro.getBoundingClientRect().bottom;
+        document.body.classList.toggle(
+          "nav-logo-expanded",
+          introBottom <= header.offsetHeight + 8,
+        );
+      };
+
+      updateHomeNavLogo();
+      window.addEventListener("scroll", updateHomeNavLogo, { passive: true });
+      window.addEventListener("resize", updateHomeNavLogo);
     </script>
     <script src="JS/carousel.js" defer></script>
   </body>
