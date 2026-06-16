@@ -202,7 +202,10 @@ p {
   background:
     radial-gradient(circle at center top, rgba(59, 130, 246, 0.24), transparent 38%),
     var(--black);
-  padding: clamp(46px, 8vw, 90px) 0 clamp(38px, 7vw, 78px);
+  display: flex;
+  align-items: center;
+  min-height: 40vh;
+  padding: clamp(32px, 4vw, 52px) 0;
   text-align: center;
 }
 
@@ -218,6 +221,10 @@ p {
   width: min(760px, 92vw);
   height: auto;
   margin: 0 auto;
+}
+
+.hero-logo-stacked {
+  display: none;
 }
 
 .hero h1 {
@@ -1413,6 +1420,20 @@ hr {
     font-family: "Montserrat", sans-serif;
     line-height: 1;
     white-space: nowrap;
+  }
+
+  .brand-intro {
+    min-height: 40vh;
+    padding: 18px 0;
+  }
+
+  .brand-intro .hero-logo-horizontal {
+    display: none;
+  }
+
+  .brand-intro .hero-logo-stacked {
+    display: block;
+    width: min(350px, 86vw);
   }
 }
 

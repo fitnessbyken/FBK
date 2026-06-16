@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 620" role="img" aria-labelledby="title desc">
+  <title id="title">Fitness By Ken stacked navigation logo</title>
+  <desc id="desc">A white and blue stacked Fitness By Ken logo with an FBK monogram for dark backgrounds.</desc>
+  <defs>
+    <style>
+      .black { fill: #0f0f0f; }
+      .blue { fill: #3b82f6; }
+      .white { fill: #ffffff; }
+      .muted { fill: #d9dee7; }
+      .name {
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 58px;
+        font-weight: 800;
+      }
+      .tagline {
+        font-family: Inter, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      .monogram { font-family: Montserrat, Arial, sans-serif; font-size: 72px; font-weight: 800; letter-spacing: -3px; }
+      .circle-label { font-family: Inter, Arial, sans-serif; font-size: 13px; font-weight: 800; letter-spacing: 1.7px; }
+      .circle-coaching { font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 800; letter-spacing: 3px; }
+    </style>
+  </defs>
+  <circle cx="310" cy="160" r="112" class="black" />
+  <circle cx="310" cy="160" r="101" fill="none" stroke="#3b82f6" stroke-width="8" />
+  <text x="310" y="154" text-anchor="middle" class="monogram white">FBK</text>
+  <rect x="258" y="174" width="104" height="6" rx="3" class="blue" />
+  <text x="310" y="209" text-anchor="middle" class="circle-label" fill="#d9dee7">FITNESS BY KEN</text>
+  <text x="310" y="237" text-anchor="middle" class="circle-coaching blue">COACHING</text>
+  <text x="310" y="370" text-anchor="middle" class="name white">Fitness By Ken</text>
+  <rect x="250" y="398" width="120" height="8" rx="4" class="blue" />
+  <text x="310" y="450" text-anchor="middle" class="tagline muted">COACHING • NUTRITION • ACCOUNTABILITY</text>
+</svg>
